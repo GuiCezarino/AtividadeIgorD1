@@ -21,7 +21,7 @@ public class ConnectionFactory {
 		try {
 			return DriverManager
 					.getConnection("jdbc:mysql://localhost/noticiario_danilherme?useTimezone=true&serverTimezone=UTC&useSSL=false", 
-							"root", "guilherme1904");
+							"root", "741852963As@");
 		} catch (SQLException ex) {
 			System.err.println("Nao foi possivel se conectar ao driver!");
 			ex.printStackTrace();

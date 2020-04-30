@@ -65,6 +65,7 @@ public class ComentarioDao {
 						
 						listaComentario.add(comentarioModel);
 					}
+					
 		} catch (SQLException e) { e.printStackTrace(); }
 		
 			return listaComentario;

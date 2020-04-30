@@ -14,22 +14,22 @@ public class NoticiaService {
 		}
 	
 		
-			public List<Noticia> listar(){
-				
-				return noticiaDao.listNoticia();
-			}
+		public List<Noticia> listar(){
 			
+			return noticiaDao.listNoticia();
+		}
+		
+		
+		public void alterar(Integer id, Noticia noticia) {
 			
-				public void alterar(Integer id, Noticia noticia) {
-					
-					noticiaDao.updateNoticia(id, noticia);
-				}
-				
-				
-					public void excluir(Integer id) {
-						
-						noticiaDao.delete(id);
-					}
-					
+			noticiaDao.updateNoticia(id, noticia);
+		}
+		
+		
+		public void excluir(Integer id) {
+			
+			noticiaDao.delete(id);
+		}
+			
 }
 
