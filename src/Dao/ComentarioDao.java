@@ -16,8 +16,9 @@ public class ComentarioDao {
 
 		public ComentarioDao() {
 			new ConnectionFactory();
-			this.conect = ConnectionFactory.conectar();
+				this.conect = ConnectionFactory.conectar();
 		}
+		
 	
 	public void insert(Comentario comentario) {
 
@@ -33,14 +34,20 @@ public class ComentarioDao {
 			ps.setString(2, comentario.getComentario());
 			ps.setInt(3, comentario.getidComentario());
 			ps.execute();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
+			
 			try {
 				conect.rollback();
 			} catch (SQLException ex) {
+				
 				System.out.println(ex.getStackTrace());
+				
 			}
+			
 		}
+		
 	}
 
 	public List<Comentario> listComentario(Integer id) {
@@ -65,6 +72,7 @@ public class ComentarioDao {
 						
 						listaComentario.add(comentarioModel);
 					}
+					
 		} catch (SQLException e) { e.printStackTrace(); }
 		
 			return listaComentario;

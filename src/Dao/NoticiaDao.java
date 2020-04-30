@@ -31,14 +31,20 @@ public class NoticiaDao {
 			ps.setString(2, noticia.getTitulo());
 			ps.setString(3, noticia.getTexto());
 			ps.execute();
+			
 		} catch (Exception e) {
+			
 			e.printStackTrace();
 			
 				try {
 					conect.rollback();
+					
 				} catch (SQLException ex) {
+					
 					System.out.println(ex.getStackTrace());
+					
 				}
+				
 				
 			}
 		
@@ -70,8 +76,11 @@ public class NoticiaDao {
 			}
 			
 		} catch (SQLException e) {
+			
 			e.printStackTrace();
+			
 		}
+		
 		return listaNoticia;
 	}
 
